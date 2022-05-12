@@ -4,13 +4,5 @@ pipeline:
   stages:
      - stage: "Clone repository"
       steps:
-        script:
-          - checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/mdsahmad/kubernetesapp.git']]])
-    - stage: "Docker and Git versions"
-      steps:
-        - bat "git --version"
-        - bat "docker --version"
+        - checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/mdsahmad/kubernetesapp.git']]])
 
-    - stage: "Docker Build"
-      steps:
-        - bat "echo 'Jenkins YAML Pipeline Complete'"
