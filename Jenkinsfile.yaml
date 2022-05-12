@@ -1,7 +1,9 @@
 pipeline:
+  agent:
+  any:
   stages:
     - stage: "Clone"
       steps:
         script:
-          - checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/mdsahmad/kubernetesapp.git']]])
+          - bat "echi hello"
 
