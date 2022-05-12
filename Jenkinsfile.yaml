@@ -5,11 +5,11 @@ pipeline:
      - stage: "Clone repository"
       steps:
         - git "https://github.com/mdsahmad/kubernetesapp.git"
-    - stage: "Log Jenkins Maven Docker Java and Git versions"
+    - stage: "Docker and Git versions"
       steps:
-        - sh "git --version"
-        - sh "docker --version"
+        - bat "git --version"
+        - bat "docker --version"
 
-    - stage: "Final Jenkins YAML Pipeline Stage"
+    - stage: "Docker Build"
       steps:
-        - sh "echo 'Jenkins YAML Pipeline Complete'"
+        - bat "echo 'Jenkins YAML Pipeline Complete'"
