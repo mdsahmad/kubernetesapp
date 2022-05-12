@@ -5,5 +5,5 @@ pipeline:
     - stage: "Clone"
       steps:
         script:
-          - bat "echi hello"
+          - git branch: 'main', url: 'https://github.com/mdsahmad/kubernetesapp.git'
 
