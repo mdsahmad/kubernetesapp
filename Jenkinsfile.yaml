@@ -2,7 +2,7 @@ pipeline:
   agent:
     any:
   stages:
-     - stage: "Clone repo"
+     - stage: "Clone repository"
       steps:
         - git "https://github.com/mdsahmad/kubernetesapp.git"
     - stage: "Log Jenkins Maven Docker Java and Git versions"
